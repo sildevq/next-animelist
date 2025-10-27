@@ -1,4 +1,4 @@
-import Anime from "./anime";
+import Anime from "./Anime";
 
 export const metadata = {
   title: "Anime",

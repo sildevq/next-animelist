@@ -14,7 +14,9 @@ export default function RootLayout({ children }) {
       <body>
         <Providers>
           <Header />
-          <main>{children}</main>
+          <main className="container mx-auto px-4 py-10 min-h-screen">
+            {children}
+          </main>
           <Footer />
         </Providers>
       </body>
