@@ -11,17 +11,16 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { LogOutIcon, UserRoundIcon } from "lucide-react";
-import { toast } from "sonner";
 import { signOut, useSession } from "next-auth/react";
 import { Spinner } from "./ui/spinner";
 import { useRouter } from "next/navigation";
 
-const AvatarDropdown = () => {
+const AvatarDropdown = ({ userId }) => {
   const { status, data } = useSession();
   const router = useRouter();
 
   const handleProfile = () => {
-    router.push(`/profile/${data.user.id}`);
+    router.push(`/profile/${userId}`);
   };
   const handleSignOut = () => {
     signOut();

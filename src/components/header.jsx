@@ -18,7 +18,7 @@ const Header = async () => {
           <div className="flex gap-5 items-center">
             <AnimeSearch />
             {session?.user ? (
-              <AvatarDropdown />
+              <AvatarDropdown userId={session.user.id} />
             ) : (
               <div className="flex gap-2">
                 <Link href="/login">
